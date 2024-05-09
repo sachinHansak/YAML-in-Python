@@ -1,0 +1,20 @@
+# Flow style:
+!!python/object:models.Person {first_name: John, last_name: Doe}
+
+# Block style:
+!!python/object:models.Person
+  first_name: John
+  last_name: Doe
+
+
+# Flow style:
+!!python/object/apply:models.Person [John, Doe]
+
+# Block style:
+!!python/object/apply:models.Person
+  - John
+  - Doe
+
+!!python/object/apply:models.Person
+args: [John]
+kwds: {last_name: Doe}
